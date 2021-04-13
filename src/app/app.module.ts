@@ -9,10 +9,13 @@ import { SetupDataService } from './services/setup-data.service';
 
 import { ModalCoreComponent } from '../app/components/core/modal-core.component';
 import { ModalControllerComponent } from '../app/components/core/modal-controller.component';
+import { FormPersonaComponent } from './components/form-persona/form-persona.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     ModalModule.forRoot()
   ],
   providers: [
@@ -24,7 +27,8 @@ import { ModalControllerComponent } from '../app/components/core/modal-controlle
     ModalCoreComponent,
     ModalControllerComponent,
     Form1Component,
-    Form2Component
+    Form2Component,
+    FormPersonaComponent
   ],
   entryComponents: [],
   bootstrap: [

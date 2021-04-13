@@ -9,7 +9,7 @@ import { ComponentContainer } from 'src/app/models/component-container.model';
   ]
 })
 export class ModalControllerComponent implements OnInit {
-  @Input() component: ComponentContainer;
+  @Input() component: ComponentContainer<any>;
   @Input() title: string;
   @Input() buttonLabel: string;
   modalRef: BsModalRef;

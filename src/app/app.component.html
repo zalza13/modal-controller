@@ -2,3 +2,26 @@
   <app-modal-controller [component]="form1"></app-modal-controller>
   <app-modal-controller [component]="form2"></app-modal-controller>
 </div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let per of listPersonas">
+        <th>{{per.id}}</th>
+        <td>{{per.nombre}}</td>
+        <td>{{per.edad}}</td>
+        <td>
+          <app-modal-controller [component]="getModalContext(per)"></app-modal-controller>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -7,7 +7,7 @@ import { ComponentContainer } from 'src/app/models/component-container.model';
   templateUrl: 'modal-core.component.html'
 })
 export class ModalCoreComponent implements OnInit, OnDestroy {
-  @Input() component: ComponentContainer;
+  @Input() component: ComponentContainer<any>;
   @ViewChild(HostComponentDirective, { static: true }) hostComponent: HostComponentDirective;
 
   currentAdIndex = -1;
@@ -27,7 +27,7 @@ export class ModalCoreComponent implements OnInit, OnDestroy {
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);
-    componentRef.instance.data = this.component.data;
+    componentRef.instance.data = this.component.data.data;
   }
 
   ngOnDestroy() { }
